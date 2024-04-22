@@ -1,0 +1,72 @@
+﻿<Window x:Class="WpfApp1.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="User's Cabinet" Height="620" Width="800" OpacityMask="Black" Background="White" WindowStartupLocation="CenterScreen">
+    <Grid HorizontalAlignment="Center" Width="780" Height="625" VerticalAlignment="Top" Margin="0,-11,0,0" RenderTransformOrigin="0.5,0.5">
+        <Grid.RenderTransform>
+            <TransformGroup>
+                <ScaleTransform/>
+                <SkewTransform/>
+                <RotateTransform Angle="360.108"/>
+                <TranslateTransform/>
+            </TransformGroup>
+        </Grid.RenderTransform>
+
+        <Grid.ColumnDefinitions>
+
+            <ColumnDefinition Width="35*"/>
+            <ColumnDefinition Width="86*"/>
+            <ColumnDefinition Width="35*"/>
+
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="83*"/>
+            <RowDefinition Height="257*"/>
+            <RowDefinition Height="236*"/>
+            <RowDefinition Height="49*"/>
+
+        </Grid.RowDefinitions>
+        <Grid.Background>
+            <ImageBrush Opacity="0.8"  Stretch="None" TileMode="Tile">
+                <ImageBrush.ImageSource>/sport-icons-set.jpg</ImageBrush.ImageSource>
+            </ImageBrush>
+        </Grid.Background>
+
+
+
+
+        <Border Background="White"  MinWidth="40" Margin="127,40,110,0" VerticalAlignment="Top" Padding="30" MaxWidth="800" CornerRadius="20" Height="530" Grid.RowSpan="3" Grid.ColumnSpan="3">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="20" Color="Gray" ShadowDepth="0"  />
+            </Border.Effect>
+
+            <Grid>
+                <Button Content="Сортировка спортсменов" BorderBrush="#FF0E0A0A" Click="Button_Click_2" Margin="-1,70,1,368"/>
+                <Button Content="Список пользователей" BorderBrush="#FF060505" Click="Button_Click" Margin="2,118,253,320"/>
+                <Button Content="Список спортсменов" BorderBrush="#FF0E0A0A" Click="Button_Click_1" Margin="254,118,4,320"/>
+                <ListView x:Name="Lw1" Margin="1,160,-1,44">
+
+                </ListView>
+                <Button Content="Выход" HorizontalAlignment="Center" Margin="0,438,0,0" VerticalAlignment="Top" Height="30" Click="Button_Click_3"/>
+
+            </Grid>
+
+        </Border>
+        <TextBlock x:Name="TBback" HorizontalAlignment="Center" Foreground="#FF373737" TextWrapping="Wrap" Text="Кабинет" VerticalAlignment="Top" Height="66" Width="220" FontSize="36" FontWeight="Bold" TextAlignment="Center" Margin="0,52,0,0" Grid.Column="1" Grid.RowSpan="2">
+            <TextBlock.Style>
+                <Style/>
+            </TextBlock.Style>
+        </TextBlock>
+        <TextBlock x:Name="TB1" HorizontalAlignment="Center" Foreground="#FFFF0404" TextWrapping="Wrap" Text="Кабинет" VerticalAlignment="Top" Height="67" Width="220" Margin="0,49,0,0" FontSize="36" FontWeight="Bold" TextAlignment="Center" RenderTransformOrigin="0.461,1.899" Grid.Column="1" Grid.RowSpan="2">
+            <TextBlock.Style>
+                <Style/>
+            </TextBlock.Style>
+        </TextBlock>
+    </Grid>
+
+</Window>
